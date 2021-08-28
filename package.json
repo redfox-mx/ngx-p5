@@ -1,8 +1,9 @@
 {
   "name": "ngx-p5",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "build:core": "nx build core",
     "postinstall": "ngcc --properties es2015 browser module main"
   },
   "private": true,
