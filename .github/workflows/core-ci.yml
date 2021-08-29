@@ -36,6 +36,6 @@ jobs:
           path: dist/core
       - uses: JS-DevTools/npm-publish@v1
         with:
-          token: ${ secrets.NPM_TOKEN }
+          token: ${{ secrets.NPM_TOKEN }}
           package: dist/core/package.json
           access: public
