@@ -1,6 +1,6 @@
 {
   "name": "ngx-p5",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "build:core": "nx build core",
