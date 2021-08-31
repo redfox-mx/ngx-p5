@@ -13,6 +13,12 @@
           "options": {
             "project": "packages/components/ng-package.json"
           },
+          "dependsOn": [
+            {
+              "target": "build",
+              "projects": "dependencies"
+            }
+          ],
           "configurations": {
             "production": {
               "tsConfig": "packages/components/tsconfig.lib.prod.json"

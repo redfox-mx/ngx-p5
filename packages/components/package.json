@@ -1,11 +1,12 @@
 {
-  "name": "@ngx-p5/components",
-  "version": "0.0.1",
+  "name": "@ngx-p5/angular",
+  "version": "0.1.0",
   "peerDependencies": {
     "@angular/common": "^12.1.0",
     "@angular/core": "^12.1.0"
   },
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.2.0",
+    "@ngx-p5/core": "^0.2.0"
   }
 }
