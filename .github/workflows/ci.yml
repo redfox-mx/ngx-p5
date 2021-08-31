@@ -1,0 +1,76 @@
+name: publish
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn test:core
+      - run: yarn build:core
+      - uses: actions/upload-artifact@v2
+        with:
+          name: core-package
+          path: dist/packages/core
+          if-no-files-found: error
+
+  publish-core:
+    needs: build-core
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/download-artifact@v2
+        with:
+          name: core-package
+          path: dist/packages/core
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: dist/core/package.json
+          access: public
+
+  build-lib:
+    needs: build-core
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+          cache: 'yarn'
+      - run: yarn install
+      - run: yarn build:angular
+      - uses: actions/upload-artifact@v2
+        with:
+          name: lib-package
+          path: dist/packages/components
+          if-no-files-found: error
+
+  publish-lib:
+    needs: build-lib
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/download-artifact@v2
+        with:
+          name: lib-package
+          path: dist/packages/components
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+          package: dist/core/package.json
+          access: public
