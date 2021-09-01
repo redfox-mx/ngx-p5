@@ -3,5 +3,6 @@
   "dest": "../../dist/packages/components",
   "lib": {
     "entryFile": "src/index.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["@ngx-p5/core"]
 }

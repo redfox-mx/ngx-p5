@@ -1,12 +1,36 @@
 {
   "name": "@ngx-p5/angular",
   "version": "0.1.0",
+  "author": {
+    "name": "Diego Hernandez",
+    "email": "hernandezdj98@outlook.com"
+  },
+  "keywords": [
+    "angular",
+    "javascript",
+    "angular-12",
+    "ngx-p5",
+    "processing",
+    "p5",
+    "p5.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redfox-mx/ngx-p5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/redfox-mx/ngx-p5/issues",
+    "email": "hernandezdj98@outlook.com"
+  },
+  "homepage": "https://github.com/redfox-mx/ngx-p5/blob/main/packages/components/README.md",
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^12.1.0",
     "@angular/core": "^12.1.0",
-    "@ngx-p5/core": "^0.2.0"
+    "p5": "^1.3.0"
   },
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.2.0",
+    "@ngx-p5/core": "^0.2.0"
   }
 }
