@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ngx-p5/components": ["packages/components/src/index.ts"],
+      "@ngx-p5/angular": ["packages/components/src/index.ts"],
       "@ngx-p5/core": ["packages/core/src/index.ts"]
     }
   },
