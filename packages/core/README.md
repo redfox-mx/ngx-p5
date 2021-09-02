@@ -48,6 +48,6 @@ createCanvas(sketch, '#awsome-sketch');
 
 __Example__: you can see in action in [codepen](https://codepen.io/redfox-mx/pen/VwWaVgP)
 
-![Fractals](./.assets/example.png)
+![Fractals](https://github.com/redfox-mx/ngx-p5/raw/main/packages/core/.assets/example.png)
 
 You can use defaul functionality and ommit second param to attach sketch to body `createCanvas(sketch)`.
