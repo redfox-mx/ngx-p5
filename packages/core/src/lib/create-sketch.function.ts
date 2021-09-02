@@ -22,10 +22,16 @@ import { isString } from './isString.function';
  * createCanvas(sketch, '#awsome-sketch')
  * ```
  */
-export function createCanvas(sketch: (p: p5) => void, container: HTMLElement | string){
-  const element = isString(container)?
-    document.querySelector(container): container;
-  const instance = new p5(sketch, element as HTMLElement);
+export function createCanvas(sketch: (p: any) => void, container?: HTMLElement | string){
+  let element;
+  if ( isString(container) ) {
+    const target = document.querySelector<HTMLElement>(container);
+    element = target ? target : undefined;
+  } else {
+    element = container;
+  }
+
+  const instance = new p5(sketch, element);
   return {
     __proto__: { constructor: createCanvas},
     get instance() { return instance },
