@@ -22,7 +22,7 @@
     "email": "hernandezdj98@outlook.com"
   },
   "homepage": "https://github.com/redfox-mx/ngx-p5/blob/main/packages/core/README.md",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "peerDependencies": {
     "p5": "^1.3.0"

@@ -1,12 +1,6 @@
 # @ngx-p5/core
 
-This package provides an easy way to use p5 instance mode, working with classes and CSS selector to attach your sketch. 
-
-<iframe height="300" style="width: 100%;" scrolling="no" title="" src="https://codepen.io/redfox-mx/embed/VwWaVgP?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href="https://codepen.io/redfox-mx/pen/VwWaVgP">
-  </a> by redfox-mx (<a href="https://codepen.io/redfox-mx">@redfox-mx</a>)
-  on <a href="https://codepen.io">CodePen</a>.
-</iframe> 
+This package provides an easy way to use p5 instance mode, working with classes and CSS selector to attach your sketch. Demo [here!](https://codepen.io/redfox-mx/pen/VwWaVgP)
 
 ## Installation
 ```bash
@@ -51,5 +45,9 @@ class AwsomeSketch {
 const sketch = toSketch(new AwsomeSketch());
 createCanvas(sketch, '#awsome-sketch');
 ```
+
+__Example__: you can see in action in [codepen](https://codepen.io/redfox-mx/pen/VwWaVgP)
+
+![Fractals](./.assets/example.png)
 
 You can use defaul functionality and ommit second param to attach sketch to body `createCanvas(sketch)`.
